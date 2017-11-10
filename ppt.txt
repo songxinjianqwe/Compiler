@@ -1,0 +1,45 @@
+Program,void->FuncBlock
+Program,int->FuncBlock
+Program,char->FuncBlock
+Program,$->
+FuncBlock,void->void FuncName ( Params ) { Statements }
+FuncBlock,int->DataType FuncName ( Params ) { Statements ReturnClause }
+FuncBlock,char->DataType FuncName ( Params ) { Statements ReturnClause }
+FuncBlock,$->
+DataType,int->int
+DataType,char->char
+FuncName,identifier->identifier
+Params,int->Param
+Params,char->Param
+Params,}->
+Param,int->DataType identifier
+Param,char->DataType identifier
+Statements,int->S
+Statements,char->S
+Statements,identifier->S
+Statements,if->S
+Statements,while->S
+Statements,}->
+PickValue,identifier->identifier = digit ;
+Condition,identifier->Keyword CompareOperator Keyword
+Condition,digit->Keyword CompareOperator Keyword
+Block,int->S
+Block,char->S
+Block,identifier->S
+Block,if->S
+Block,while->S
+Block,{->{ Statements }
+S,int->DataType PickValue
+S,char->DataType PickValue
+S,identifier->PickValue
+S,if->if ( Condition ) Block
+S,while->while ( Condition ) Block
+Keyword,identifier->identifier
+Keyword,digit->digit
+ReturnClause,return->return Keyword ;
+CompareOperator,>-> >
+CompareOperator,>=-> >=
+CompareOperator,<-> <
+CompareOperator,<=-> <=
+CompareOperator,==-> ==
+CompareOperator,!=-> !=
