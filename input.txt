@@ -1,7 +1,7 @@
 int main(int x) {
-	if (x != 4) {
-		while (3 >= 2){
-			y = 2;
+	if (x > 23) {
+		while (5 != 3){
+			x = 200;
 		}
 	}
 	return x;

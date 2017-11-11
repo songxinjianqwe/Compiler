@@ -45,13 +45,13 @@ public class PPT {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (Map.Entry<Token, Map<Token, List<Token>>> entry : table.entrySet()) {
-            for (Map.Entry<Token, List<Token>> e : entry.getValue().entrySet()) {
-                System.out.print(entry.getKey() + ",");
-                System.out.print(e.getKey() + ":");
-                System.out.println(e.getValue());
-            }
-        }
+//        for (Map.Entry<Token, Map<Token, List<Token>>> entry : table.entrySet()) {
+//            for (Map.Entry<Token, List<Token>> e : entry.getValue().entrySet()) {
+//                System.out.print(entry.getKey() + ",");
+//                System.out.print(e.getKey() + ":");
+//                System.out.println(e.getValue());
+//            }
+//        }
     }
 
     public boolean in(Token nonTerminal, Token input) {

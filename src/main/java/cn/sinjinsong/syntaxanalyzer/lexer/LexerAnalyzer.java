@@ -33,7 +33,7 @@ public class LexerAnalyzer {
             //读入第一个非空白的字符
             this.getFirstNotWhiteSpaceChar();
             //如果读完，那么退出
-            if (i == buffer.length()) {
+            if (i > buffer.length()) {
                 break;
             }
             //**********************************
@@ -164,6 +164,7 @@ public class LexerAnalyzer {
     public List<Token> getTokens() {
         return this.tokens.stream().map(Pair::getToken).collect(Collectors.toList());
     }
+    
     public List<Pair> getPairs(){
         return this.tokens;
     }
